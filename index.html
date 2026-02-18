@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Thunder Animation */
+body::before{
+    content:"";
+    position:fixed;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle,rgba(166,77,255,0.4) 0%,transparent 60%);
+    animation:lightning 6s infinite;
+    pointer-events:none;
+}
+
+@keyframes lightning{
+    0%,90%,100%{opacity:0;}
+    92%{opacity:0.8;}
+    94%{opacity:0;}
+    96%{opacity:0.6;}
+    98%{opacity:0;}
+}
+
+/* Navbar */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:rgba(20,0,40,0.6);
+    backdrop-filter:blur(8px);
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#b266ff;
+    text-shadow:0 0 15px #b266ff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:inherit;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#b266ff;
+}
+
+/* Sections */
+section{
+    min-height:100vh;
+    padding:100px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:20px;
+    text-shadow:0 0 25px #a64dff;
+}
+
+p{
+    font-size:18px;
+    margin-bottom:30px;
+    opacity:0.8;
+}
+
+.buttons a{
+    padding:14px 32px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#6a00ff,#a64dff);
+    margin:10px;
+    transition:0.3s;
+    box-shadow:0 0 15px #6a00ff;
+}
+
+.buttons a:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px #a64dff;
+}
+
+/* About List */
+.about-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:600px;
+}
+
+.about-list div{
+    background:rgba(40,0,70,0.6);
+    padding:15px;
+    border-radius:10px;
+    transition:0.3s;
+    border:1px solid rgba(166,77,255,0.4);
+}
+
+.about-list div:hover{
+    transform:translateX(6px);
+    box-shadow:0 0 20px #6a00ff;
+}
+
+/* Smooth scroll */
+html{
+    scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">:p</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<section id="home">
+    <h1>What do you want?</h1>
+    <p>Choose your next move</p>
+
+    <div class="buttons">
+        <a href="#about">About Me</a>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+    <h1>About Me</h1>
+
+    <div class="about-list">
+        <div>🎓 High School Student</div>
+        <div>🔬 Strong Interest in Science & Innovation</div>
+        <div>💻 Passionate About Coding & Technology</div>
+        <div>🎮 Dedicated Gamer</div>
+        <div>🌙 Enjoys Chilling, Music & Downtime</div>
+        <div>☕ Powered by Coffee & Curiosity</div>
+        <div>🚀 Focused on Growth, Learning & Building</div>
+    </div>
+
+    <div class="buttons" style="margin-top:40px;">
+        <a href="#home">⬅ Back</a>
+    </div>
+</section>
+
+</body>
+</html>
