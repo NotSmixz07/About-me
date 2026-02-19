@@ -19,7 +19,7 @@ body{
     overflow-x:hidden;
 }
 
-/* Thunder Animation */
+/* ⚡ Purple Thunder Flash */
 body::before{
     content:"";
     position:fixed;
@@ -27,27 +27,28 @@ body::before{
     left:-50%;
     width:200%;
     height:200%;
-    background:radial-gradient(circle,rgba(166,77,255,0.4) 0%,transparent 60%);
+    background:radial-gradient(circle,rgba(166,77,255,0.45) 0%,transparent 60%);
     animation:lightning 6s infinite;
     pointer-events:none;
+    z-index:-1;
 }
 
 @keyframes lightning{
     0%,90%,100%{opacity:0;}
-    92%{opacity:0.8;}
+    92%{opacity:0.9;}
     94%{opacity:0;}
-    96%{opacity:0.6;}
+    96%{opacity:0.7;}
     98%{opacity:0;}
 }
 
-/* Navbar */
+/* NAVBAR */
 header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 50px;
+    padding:20px 60px;
     background:rgba(20,0,40,0.6);
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(10px);
 }
 
 .logo{
@@ -58,8 +59,8 @@ header{
 }
 
 nav ul{
-    display:flex;
     list-style:none;
+    display:flex;
     gap:30px;
 }
 
@@ -73,69 +74,49 @@ nav ul li a:hover{
     color:#b266ff;
 }
 
-/* Sections */
-section{
-    min-height:100vh;
-    padding:100px 20px;
+/* HERO */
+.hero{
+    min-height:90vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:20px;
 }
 
-h1{
-    font-size:48px;
+.hero h1{
+    font-size:50px;
     margin-bottom:20px;
     text-shadow:0 0 25px #a64dff;
 }
 
-p{
+.hero p{
     font-size:18px;
-    margin-bottom:30px;
+    margin-bottom:40px;
     opacity:0.8;
 }
 
-.buttons a{
+.button{
     padding:14px 32px;
     border-radius:10px;
     text-decoration:none;
     color:white;
     background:linear-gradient(45deg,#6a00ff,#a64dff);
-    margin:10px;
     transition:0.3s;
     box-shadow:0 0 15px #6a00ff;
 }
 
-.buttons a:hover{
+.button:hover{
     transform:translateY(-5px);
     box-shadow:0 0 25px #a64dff;
 }
 
-/* About List */
-.about-list{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    max-width:600px;
-}
-
-.about-list div{
-    background:rgba(40,0,70,0.6);
-    padding:15px;
-    border-radius:10px;
-    transition:0.3s;
-    border:1px solid rgba(166,77,255,0.4);
-}
-
-.about-list div:hover{
-    transform:translateX(6px);
-    box-shadow:0 0 20px #6a00ff;
-}
-
-/* Smooth scroll */
-html{
-    scroll-behavior:smooth;
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    opacity:0.6;
 }
 </style>
 </head>
@@ -146,40 +127,22 @@ html{
     <div class="logo">:p</div>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- HOME SECTION -->
-<section id="home">
+<section class="hero">
     <h1>What do you want?</h1>
     <p>Choose your next move</p>
 
-    <div class="buttons">
-        <a href="#about">About Me</a>
-    </div>
+    <a href="about.html" target="_blank" class="button">About Me</a>
 </section>
 
-<!-- ABOUT SECTION -->
-<section id="about">
-    <h1>About Me</h1>
-
-    <div class="about-list">
-        <div>🎓 High School Student</div>
-        <div>🔬 Strong Interest in Science & Innovation</div>
-        <div>💻 Passionate About Coding & Technology</div>
-        <div>🎮 Dedicated Gamer</div>
-        <div>🌙 Enjoys Chilling, Music & Downtime</div>
-        <div>☕ Powered by Coffee & Curiosity</div>
-        <div>🚀 Focused on Growth, Learning & Building</div>
-    </div>
-
-    <div class="buttons" style="margin-top:40px;">
-        <a href="#home">⬅ Back</a>
-    </div>
-</section>
+<footer>
+    © 2026
+</footer>
 
 </body>
 </html>
